@@ -1,0 +1,83 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* UI variant: teal/amber theme with Inter + Lexend typography and a
+   softer, more rounded shape language than the original blue theme. Every
+   token below flows through the same semantic classes (bg-primary, etc.)
+   used across all components, so this is a pure visual re-skin - no
+   component logic, routes, or API behavior changed. */
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 200 35% 10%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 200 35% 10%;
+
+    --primary: 186 84% 28%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 174 30% 95%;
+    --secondary-foreground: 200 35% 10%;
+
+    --muted: 174 25% 95%;
+    --muted-foreground: 200 12% 42%;
+
+    --accent: 38 92% 50%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 174 20% 89%;
+    --input: 174 20% 89%;
+    --ring: 186 84% 28%;
+
+    --radius: 1rem;
+  }
+
+  .dark {
+    --background: 200 33% 7%;
+    --foreground: 174 15% 96%;
+
+    --card: 200 28% 10%;
+    --card-foreground: 174 15% 96%;
+
+    --primary: 174 60% 45%;
+    --primary-foreground: 200 35% 8%;
+
+    --secondary: 200 20% 15%;
+    --secondary-foreground: 174 15% 96%;
+
+    --muted: 200 20% 15%;
+    --muted-foreground: 174 10% 65%;
+
+    --accent: 38 92% 55%;
+    --accent-foreground: 200 35% 8%;
+
+    --destructive: 0 63% 48%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 200 18% 18%;
+    --input: 200 18% 18%;
+    --ring: 174 60% 45%;
+  }
+
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  }
+  h1, h2, h3, h4 {
+    font-family: 'Lexend', 'Inter', system-ui, sans-serif;
+  }
+}
+
+@layer utilities {
+  .font-display {
+    font-family: 'Lexend', 'Inter', system-ui, sans-serif;
+  }
+}
